@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lauro Mário | R.A.I</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    :root {
+      --primary: #00d1b2;
+      --dark: #001f3f;
+      --text: #ffffff;
+      --accent: #ffd700;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, var(--dark), #000);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      animation: fadeIn 2s ease-in-out;
+      padding: 30px 15px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .logo {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid var(--primary);
+      box-shadow: 0 0 10px var(--primary);
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    h1 {
+      font-size: 2.7rem;
+      margin-top: 15px;
+      color: var(--text);
+      text-shadow: 1px 1px 5px #000;
+    }
+
+    .sub {
+      font-size: 1.1rem;
+      color: #cce6ff;
+      margin-top: 5px;
+    }
+
+    .lema {
+      margin-top: 10px;
+      font-size: 1.3rem;
+      font-style: italic;
+      color: var(--accent);
+      text-shadow: 1px 1px 2px #000;
+    }
+
+    .intro {
+      max-width: 700px;
+      text-align: center;
+      margin-top: 20px;
+      font-size: 1rem;
+      line-height: 1.7;
+      color: #cfdff6;
+    }
+
+    .botoes {
+      margin-top: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .btn {
+      background-color: var(--primary);
+      color: #000;
+      padding: 12px 22px;
+      border: none;
+      border-radius: 30px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: 0.3s;
+      box-shadow: 0 4px 12px rgba(0, 209, 178, 0.2);
+    }
+
+    .btn:hover {
+      background-color: #00b89c;
+      transform: translateY(-2px);
+    }
+
+    .btn-musica {
+      margin-top: 25px;
+      padding: 10px 20px;
+      background-color: var(--accent);
+      border: none;
+      border-radius: 30px;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn-musica:hover {
+      background-color: #e6c200;
+      transform: scale(1.05);
+    }
+
+    footer {
+      margin-top: auto;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #aaa;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="img/logo.png" alt="logo" class="logo">
+    <h1>Lauro Mário</h1>
+    <p class="sub">Criador de Soluções, Sonhador Digital</p>
+    <p class="lema">A tua mente é o teu código</p>
+    <div class="intro">
+      <p>Sou apaixonado por tecnologia, informática e a liberdade de criar o impossível. Aqui compartilho minha jornada, projetos e cursos que em breve vou oferecer para quem quer aprender de forma prática e acessível.</p>
+    </div>
+    <div class="botoes">
+      <a href="sobre.html" class="btn">Sobre Mim</a>
+      <a href="cursos.html" class="btn">Meus Cursos</a>
+      <a href="inscricao.html" class="btn">Inscrever-se</a>
+      <a href="contacto.html" class="btn">Contactar</a>
+    </div>
+    <button class="btn-musica" onclick="document.getElementById('musica').play()">🎧 Ativar Música</button>
+    <audio id="musica" src="audio/fundo.mp3" loop></audio>
+  </header>
+
+  <footer>
+    &copy; 2025 Lauro Mário | Revolução de Aprendizagem Individual (R.A.I)
+  </footer>
+
+</body>
+</html>
