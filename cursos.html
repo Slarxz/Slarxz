@@ -1,0 +1,113 @@
+<!DOCTYPE html><html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meus Cursos | Lauro Mário</title>
+  <style>
+    :root {
+      --primary: #00d1b2;
+      --dark: #001f3f;
+      --text: #ffffff;
+      --accent: #ffd700;
+    }body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, var(--dark), #000);
+  color: var(--text);
+  padding: 30px 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: var(--accent);
+}
+
+.curso {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 0 12px rgba(0, 209, 178, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.curso:hover {
+  transform: translateY(-5px);
+}
+
+.curso h2 {
+  color: var(--primary);
+  cursor: pointer;
+}
+
+.conteudo {
+  display: none;
+  margin-top: 15px;
+}
+
+.conteudo p {
+  line-height: 1.6;
+  color: #cfe6ff;
+}
+
+.conteudo iframe {
+  margin-top: 15px;
+  width: 100%;
+  height: 280px;
+  border: none;
+  border-radius: 8px;
+}
+
+.voltar {
+  display: inline-block;
+  margin-top: 40px;
+  background-color: var(--primary);
+  color: #000;
+  padding: 10px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.voltar:hover {
+  background-color: #00b89c;
+  transform: scale(1.05);
+}
+
+  </style>
+</head>
+<body>  <header>
+    <h1>Meus Cursos</h1>
+  </header>  <section class="curso">
+    <h2 onclick="toggleConteudo('blender')">🧊 Animação 3D com Blender</h2>
+    <div id="blender" class="conteudo">
+      <p>Aprenda a criar animações 3D do zero, usando o Blender, um dos softwares mais poderosos e gratuitos do mundo. Vamos explorar modelagem, texturização, iluminação e renderização.</p>
+      <iframe src="https://www.youtube.com/embed/your_video_id1" allowfullscreen></iframe>
+    </div>
+  </section>  <section class="curso">
+    <h2 onclick="toggleConteudo('web')">💻 Desenvolvimento de Páginas Web</h2>
+    <div id="web" class="conteudo">
+      <p>Descubra como construir sites do zero, com HTML, CSS e JavaScript. Ideal para iniciantes que querem entrar no mundo do desenvolvimento web.</p>
+      <iframe src="https://www.youtube.com/embed/your_video_id2" allowfullscreen></iframe>
+    </div>
+  </section>  <section class="curso">
+    <h2 onclick="toggleConteudo('hacking')">🕵️‍♂️ Hacking Ético & Segurança</h2>
+    <div id="hacking" class="conteudo">
+      <p>Aprenda os princípios da segurança digital e práticas de hacking ético para proteger sistemas e redes. Focado em responsabilidade e conhecimento prático.</p>
+      <iframe src="https://www.youtube.com/embed/your_video_id3" allowfullscreen></iframe>
+    </div>
+  </section><a href="index.html" class="voltar">⬅ Voltar ao Início</a>
+
+  <script>
+    function toggleConteudo(id) {
+      const elem = document.getElementById(id);
+      elem.style.display = elem.style.display === 'block' ? 'none' : 'block';
+    }
+  </script></body>
+</html>

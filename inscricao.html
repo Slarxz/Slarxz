@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inscrição | R.A.I</title>
+  <style>
+    :root {
+      --primary: #00d1b2;
+      --dark: #001f3f;
+      --text: #ffffff;
+      --accent: #ffd700;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, var(--dark), #000);
+      color: var(--text);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+      animation: fadeIn 1.2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .form-box {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 35px;
+      border-radius: 12px;
+      width: 100%;
+      max-width: 500px;
+      box-shadow: 0 0 10px rgba(0, 209, 178, 0.2);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: var(--accent);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: bold;
+      margin-top: 15px;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 6px;
+      margin-bottom: 10px;
+      font-size: 1rem;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: var(--primary);
+      color: #000;
+      font-weight: bold;
+      border: none;
+      border-radius: 30px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background-color: #00b89c;
+    }
+
+    .voltar {
+      margin-top: 15px;
+      text-align: center;
+    }
+
+    .voltar a {
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+
+    .voltar a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-box">
+    <h1>Inscrição R.A.I</h1>
+    <form action="https://formsubmit.co/slarxzstudios@gmail.com" method="POST">
+
+      <!-- Configurações ocultas -->
+      <input type="hidden" name="_next" value="sucesso.html">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_subject" value="Nova inscrição no site de Lauro Mário">
+
+      <label for="nome">Nome completo:</label>
+      <input type="text" id="nome" name="nome" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="curso">Curso:</label>
+      <select id="curso" name="curso" required>
+        <option value="">Selecione</option>
+        <option value="Blender">Animação 3D com Blender</option>
+        <option value="Web">Desenvolvimento Web</option>
+        <option value="Hacking">Hacking Ético</option>
+      </select>
+
+      <label for="turno">Turno:</label>
+      <select id="turno" name="turno" required>
+        <option value="">Selecione</option>
+        <option value="Manhã">Manhã</option>
+        <option value="Tarde">Tarde</option>
+        <option value="Noite">Noite</option>
+      </select>
+
+      <label for="mensagem">Mensagem adicional:</label>
+      <textarea id="mensagem" name="mensagem" rows="3" placeholder="Deixa uma observação se quiser..."></textarea>
+
+      <button type="submit">Enviar Inscrição</button>
+    </form>
+
+    <div class="voltar">
+      <a href="index.html">⬅ Voltar à página inicial</a>
+    </div>
+  </div>
+</body>
+</html>
